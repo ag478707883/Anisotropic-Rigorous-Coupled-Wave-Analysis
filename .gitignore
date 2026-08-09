@@ -1,0 +1,36 @@
+# Build directory
+build/
+build-*/
+
+# Compiled object and binary artifacts
+*.exe
+*.dll
+*.lib
+*.a
+*.obj
+*.o
+*.pdb
+*.ilk
+*.user
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Unpublished generated figures
+images/Ag-wsm-ge-gesquare.png
+images/Ag-wsm-ge-square-hole.png
+images/Ag-wsm-ge-square-hole-local-period.png
+
+# Generated numeric outputs
+images/*.csv
+
+# Claude Code skills
+.codex/
+
+# Local tool/runtime installer caches
+.dotnet-runtime-installers/

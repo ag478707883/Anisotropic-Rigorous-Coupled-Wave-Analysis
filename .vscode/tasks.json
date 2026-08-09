@@ -1,0 +1,71 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: configure RCWA",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}",
+                "-B",
+                "${workspaceFolder}\\build",
+                "-DRCWA_ENABLE_PYTHON_BINDINGS=ON",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: build RCWA",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}\\build",
+                "--target",
+                "rcwa_tests",
+                "rcwa_cpp",
+                "--config",
+                "Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "CMake: configure RCWA"
+            ]
+        },
+        {
+            "label": "CMake: test RCWA",
+            "type": "shell",
+            "command": "ctest",
+            "args": [
+                "--test-dir",
+                "${workspaceFolder}\\build",
+                "-C",
+                "Debug",
+                "--output-on-failure"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "Path": "C:\\Program Files (x86)\\Intel\\oneAPI\\mkl\\latest\\bin;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\bin;${env:Path}"
+                }
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "CMake: build RCWA"
+            ]
+        }
+    ]
+}

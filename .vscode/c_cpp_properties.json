@@ -1,0 +1,30 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "RCWA",
+            "compilerPath": "C:\\mingw64\\bin\\g++.exe",
+            "intelliSenseMode": "windows-gcc-x64",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/bindings",
+                "D:/Program Files/Python39/include",
+                "D:/Program Files/Python39/Lib/site-packages/pybind11/include",
+                "D:/Program Files/Python39/Lib/site-packages/numpy/_core/include",
+                "C:/Program Files (x86)/Intel/oneAPI/mkl/latest/include",
+                "${workspaceFolder}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "RCWA_HAS_LAPACKE=1",
+                "RCWA_HAS_CBLAS=1",
+                "RCWA_HAS_MKL=1",
+                "RCWA_HAS_FFTW=1"
+            ]
+        }
+    ]
+}

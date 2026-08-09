@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug rcwa_tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\build\\Debug\\rcwa_tests.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "Path",
+                    "value": "C:\\Program Files (x86)\\Intel\\oneAPI\\mkl\\latest\\bin;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\bin;${env:Path}"
+                }
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "CMake: build RCWA"
+        }
+    ]
+}

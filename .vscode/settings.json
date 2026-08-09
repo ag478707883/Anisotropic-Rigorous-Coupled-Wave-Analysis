@@ -1,0 +1,44 @@
+{
+    "C_Cpp.default.compilerPath": "C:\\mingw64\\bin\\g++.exe",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/bindings",
+        "D:/Program Files/Python39/include",
+        "D:/Program Files/Python39/Lib/site-packages/pybind11/include",
+        "D:/Program Files/Python39/Lib/site-packages/numpy/_core/include",
+        "C:/Program Files (x86)/Intel/oneAPI/mkl/latest/include",
+        "${workspaceFolder}"
+    ],
+    "C_Cpp.default.defines": [
+        "_DEBUG",
+        "RCWA_HAS_LAPACKE=1",
+        "RCWA_HAS_CBLAS=1",
+        "RCWA_HAS_MKL=1",
+        "RCWA_HAS_FFTW=1"
+    ],
+    "C_Cpp.debugShortcut": false,
+    "cmake.configureOnOpen": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureSettings": {
+        "RCWA_ENABLE_PYTHON_BINDINGS": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "terminal.integrated.env.windows": {
+        "Path": "C:\\Program Files (x86)\\Intel\\oneAPI\\mkl\\latest\\bin;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\bin;${env:Path}"
+    },
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
